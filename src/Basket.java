@@ -48,13 +48,6 @@ public class Basket {
             for (int quantity : quantities) {
                 out.print(quantity + " ");
             }
-            //out.println(String.join("", products));
-            //out.println(String.join("", Arrays.stream(prices)
-            //        .mapToObj(String::valueOf)
-            //        .toArray(String[]::new);
-            //out.println(String.join("", Arrays.stream(quantities)
-            //        .mapToObj(String::valueOf)
-            //        .toArray(String[]::new);
         }
     }
 
