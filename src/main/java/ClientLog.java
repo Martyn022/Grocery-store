@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ClientLog {
-    String log = "productNumber, productCount\n";
+    public String log = "productNumber, productCount\n";
 
     public void log(int productNumber, int productCount) {
         log += String.format("%d,%d\n", productNumber, productCount);

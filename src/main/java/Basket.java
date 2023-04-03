@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.*;
 import java.util.Arrays;
@@ -77,7 +78,7 @@ public class Basket {
 
     public void saveJSON(File file) {
         try (PrintWriter writer = new PrintWriter(file)) {
-            Gson gson = new Gson();
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String json = gson.toJson(this);
             writer.print(json);
         } catch (IOException e) {

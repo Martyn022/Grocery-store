@@ -12,3 +12,19 @@ productNumber, productCount
 0,1
 1,1
 2,1
+productNumber, productCount
+0,5
+2,2
+1,1
+productNumber, productCount
+0,5
+1,2
+2,3
+0,1
+productNumber, productCount
+0,5
+1,3
+2,2
+productNumber, productCount
+0,5
+2,2
