@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Arrays;
 
 public class Basket {
+    private static final long serialVersionUID = 1L;
     private String[] products;
     private int[] prices;
     private int[] quantities;
@@ -54,7 +55,7 @@ public class Basket {
         }
     }
 
-    static Basket loadFromTxtFile(File textFile) {
+    public static Basket loadFromTxtFile(File textFile) {
         Basket basket = new Basket();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(textFile))) {
             String productsStr = bufferedReader.readLine();
@@ -103,5 +104,3 @@ public class Basket {
     }
 
 }
-
-

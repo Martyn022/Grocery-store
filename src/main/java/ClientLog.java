@@ -10,9 +10,6 @@ public class ClientLog {
     }
 
     public void exportAsCSV(File txtFile) {
-//        FileWriter writer = new FileWriter(txtFile);
-//        writer.write(log);
-//        writer.close();
         if (!txtFile.exists()) {
             log = "productNumber, productCount\n" + log;
         }
