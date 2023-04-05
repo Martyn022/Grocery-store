@@ -9,16 +9,16 @@ import java.io.File;
 import java.io.IOException;
 
 public class XMLSetReader {
-    public boolean isLoad;
-    public String loadFile;
-    public String loadFormat;
-    public boolean isSave;
-    public String saveFile;
-    public String saveFormat;
-    public boolean isLog;
-    public String logFile;
+    protected boolean isLoad;
+    protected String loadFile;
+    protected String loadFormat;
+    protected boolean isSave;
+    protected String saveFile;
+    protected String saveFormat;
+    protected boolean isLog;
+    protected String logFile;
 
-    public XMLSetReader(File xmlFile) throws ParserConfigurationException, IOException, SAXException {
+    protected XMLSetReader(File xmlFile) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.parse(xmlFile);

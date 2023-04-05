@@ -5,25 +5,24 @@ import java.io.*;
 import java.util.Arrays;
 
 public class Basket {
-    private static final long serialVersionUID = 1L;
-    private String[] products;
-    private int[] prices;
-    private int[] quantities;
+    protected String[] products;
+    protected int[] prices;
+    protected int[] quantities;
 
-    public Basket() {
+    protected Basket() {
     }
 
-    public Basket(String[] products, int[] prices) {
+    protected Basket(String[] products, int[] prices) {
         this.products = products;
         this.prices = prices;
         this.quantities = new int[products.length];
     }
 
-    public void addToCart(int productNumber, int productCount) {
+    protected void addToCart(int productNumber, int productCount) {
         quantities[productNumber] += productCount;
     }
 
-    public void printCart() {
+    protected void printCart() {
         int sumProducts = 0;
         System.out.println("Ваша корзина:");
         for (int i = 0; i < products.length; i++) {
@@ -39,7 +38,7 @@ public class Basket {
         System.out.println("Итого: " + sumProducts + " руб.");
     }
 
-    public void saveTxt(File textFile) throws FileNotFoundException {
+    protected void saveTxt(File textFile) throws FileNotFoundException {
         try (PrintWriter out = new PrintWriter(textFile)) {
             for (String product : products) {
                 out.print(product + " ");
@@ -55,7 +54,7 @@ public class Basket {
         }
     }
 
-    public static Basket loadFromTxtFile(File textFile) {
+    protected static Basket loadFromTxtFile(File textFile) {
         Basket basket = new Basket();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(textFile))) {
             String productsStr = bufferedReader.readLine();
@@ -77,7 +76,7 @@ public class Basket {
         return basket;
     }
 
-    public void saveJSON(File file) {
+    protected void saveJSON(File file) {
         try (PrintWriter writer = new PrintWriter(file)) {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             String json = gson.toJson(this);
@@ -87,7 +86,7 @@ public class Basket {
         }
     }
 
-    public static Basket loadFromJSONFile(File file) {
+    protected static Basket loadFromJSONFile(File file) {
         Basket basket = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             StringBuilder builder = new StringBuilder();

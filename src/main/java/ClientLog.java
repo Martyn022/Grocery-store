@@ -3,13 +3,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ClientLog {
-    public String log = "productNumber, productCount\n";
+    protected String log = "productNumber, productCount\n";
 
-    public void log(int productNumber, int productCount) {
+    protected void log(int productNumber, int productCount) {
         log += String.format("%d,%d\n", productNumber, productCount);
     }
 
-    public void exportAsCSV(File txtFile) {
+    protected void exportAsCSV(File txtFile) {
         if (!txtFile.exists()) {
             log = "productNumber, productCount\n" + log;
         }

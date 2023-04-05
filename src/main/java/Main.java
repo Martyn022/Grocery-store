@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static Scanner scanner = new Scanner(System.in);
-    public static String[] products = {"Хлеб", "Яблоки", "Молоко"};
-    public static int[] prices = {100, 200, 300};
+    protected static Scanner scanner = new Scanner(System.in);
+    protected static String[] products = {"Хлеб", "Яблоки", "Молоко"};
+    protected static int[] prices = {100, 200, 300};
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
 
@@ -54,7 +54,7 @@ public class Main {
         basket.printCart();
     }
 
-    private static Basket createBasket(File loadFile, boolean isLoad, String loadFormat) {
+    protected static Basket createBasket(File loadFile, boolean isLoad, String loadFormat) {
         Basket basket;
         if (isLoad && loadFile.exists()) {
             basket = switch (loadFormat) {
