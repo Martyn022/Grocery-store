@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
     public static String[] products = {"Хлеб", "Яблоки", "Молоко"};
-    protected static int[] prices = {100, 200, 300};
+    public static int[] prices = {100, 200, 300};
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
 

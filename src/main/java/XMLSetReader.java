@@ -9,13 +9,13 @@ import java.io.File;
 import java.io.IOException;
 
 public class XMLSetReader {
-    protected boolean isLoad;
+    public boolean isLoad;
     public String loadFile;
     public String loadFormat;
-    protected boolean isSave;
+    public boolean isSave;
     public String saveFile;
     public String saveFormat;
-    protected boolean isLog;
+    public boolean isLog;
     public String logFile;
 
     public XMLSetReader(File xmlFile) throws ParserConfigurationException, IOException, SAXException {
